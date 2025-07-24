@@ -3,36 +3,53 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Practics</title>
+    <title>Practics CSS Responsive</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
 
   <body>
     <main>
       <section>
         <div class="in-the-new">
-          <div class="title-bar">In The News</div>
+          <div class="title-bar">
+            <h4 class="animate__animated animate__backInLeft">In The News</h4>
+          </div>
         </div>
         <div class="container">
           <div class="row">
             <div class="col-8">
               <div class="news-top">
-                <div class="image" data-aos="fade-down-right">
+                <div
+                  class="image"
+                  data-aos="fade-down-right"
+                  data-aos-anchor-placement="center-center"
+                >
                   <img
                     src="assets/image/IISc-grant_card_hz_tab_364x362.jpg"
                     alt=""
                   />
                 </div>
 
-                <div class="description">
+                <div class="description animate__animated animate__backInDown">
                   <div class="arrow-left"></div>
 
                   <article class="">PRESS RELEASE</article>
                   <div class="sum-description">
-                    Tata group and IISc partner <br />
-                    to establish medical school <br />
-                    to pioneer healthcare <br />
-                    education and research
+                    <h4>
+                      Tata group and IISc partner <br />
+                      to establish medical school <br />
+                      to pioneer healthcare <br />
+                      education and research
+                    </h4>
                   </div>
 
                   <p class="">
@@ -43,7 +60,7 @@
               </div>
             </div>
             <div class="col-4">
-              <div class="card">
+              <div class="card" data-aos="fade-up-left">
                 <div class="fact">
                   <article>FACTS</article>
                   <h3>Did you know</h3>
@@ -59,15 +76,14 @@
               </div>
             </div>
             <div class="col-4">
-              <div class="image">
+              <div class="image animate__animated animate__pulse">
                 <div class="overlay-text">
                   <p>
                     The #TataUltraMarathon 2025 in Lonavala's rugged Sahyadri
                     Range was the ultimate test of endurance. From the grueling
                     50-km marathon to the thrilling 35-km Tata Challenge Run,
-                    our runners conquered every obstacle- because ... <br>
-                    3 days ago
-                    41Y
+                    our runners conquered every obstacle- because ... <br />
+                    <span class="change-font">3 days ago</span>
                   </p>
                 </div>
               </div>
@@ -77,14 +93,13 @@
                 <div class="description" style="position: relative">
                   <div class="image-left">
                     <p>
-                      The #TataUltraMarathon 2025 in Lonavala's <br />
-                      rugged Sahyadri Range was the ultimate test <br />
-                      ol endurance. From the grueling 50-km marathon to the
-                      thrilling 35-km <br />lala Challenge Run, our runners
-                      conquered every <br />
-                      obstacle because <br> 3 days ago
+                      The #TataUltraMarathon 2025 in Lonavala's rugged Sahyadri
+                      Range was the ultimate test ol endurance. From the
+                      grueling 50-km marathon to the thrilling 35-km lala
+                      Challenge Run, our runners conquered every obstacle
+                      -because ... <br />
+                      <span class="change-font">3 days ago</span>
                     </p>
-                    <!-- <div class="change-font">3 days ago</div> -->
                   </div>
                 </div>
                 <div
@@ -97,5 +112,32 @@
         </div>
       </section>
     </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+      const swiper = new Swiper(".swiper", {
+        // Optional parameters
+        direction: "horizontal",
+        loop: true,
+
+        // If we need pagination
+        pagination: {
+          el: ".swiper-pagination",
+        },
+
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+
+        // And if we need scrollbar
+        scrollbar: {
+          el: ".swiper-scrollbar",
+        },
+      });
+    </script>
   </body>
 </html>
